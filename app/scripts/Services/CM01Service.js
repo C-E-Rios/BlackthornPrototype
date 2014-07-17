@@ -8,11 +8,31 @@ app.factory('CM01Service', function ($http) {
         SuspectIds: [],
         CaseForm: {
             CaseOutline: {
-                CaseClassification: [],
-                CaseOutlineDetail: {}
+                CaseOutlineDetail: []
             },
-            OfficerCompletingDetails: null,
-            SupervisingOfficerDetails: null,
+            OfficerCompletingDetails: [
+                {
+                    Title: '',
+                    OtherTitle: '',
+                    TelephoneType: '',
+                    TelephoneNumber: '',
+                    Extension: '',
+                    EmailAddress: '',
+                    WarrantNumber: ''
+                }
+            ],
+            SupervisingOfficerDetails: [
+                {
+                    Title: '',
+                    OtherTitle: '',
+                    TelephoneType: '',
+                    TelephoneNumber: '',
+                    Extension: '',
+                    EmailAddress: '',
+                    WarrantNumber: '',
+                    Narrative: ''
+                }
+            ],
             AssociatedInvestigation: null,
             CommunicationType: null
         }
@@ -39,11 +59,11 @@ app.factory('CM01Service', function ($http) {
 
     // Data Capture ================================
 
-    var caseClassifications = null;
+    var CM01Data = null;
 
-    var getCaseClassificationData = function () {
-        return $http.get('scripts/Data/CaseClassifications.js').success(function (data) {
-            caseClassifications = data;
+    var getCM01Data = function () {
+        return $http.get('scripts/Data/CM01Data.json').success(function (data) {
+            CM01Data = data;
         });
     }
 
@@ -62,11 +82,11 @@ app.factory('CM01Service', function ($http) {
             return $http.post('../datarequestapi/cm01/suspects', data);
         },
 
-        getCaseClassificationData: getCaseClassificationData,
-        caseClassifications: function() {
-            return caseClassifications
+        getCM01Data: getCM01Data,
+        CM01Data: function() {
+            return CM01Data
         },
-        connectClassificationToMessage: function (data) {
+        connectCM01DataToMessage: function (data) {
             return $http.post('../datarequestapi/cm01/datacapture', data);
         },
         connectIdToMessage: function (data) {

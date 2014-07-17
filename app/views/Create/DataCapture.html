@@ -13,7 +13,7 @@
                             <div class="col-xs-6 col-md-5">
                                 <ul class="page-top-tools list-inline pull-right">
                                     <li class="next-button">
-                                        <button id="DataCaptureNextButton" data-ng-click="caseClassifications.connectClassification()" class="btn btn-primary btn-sm btn-next">
+                                        <button id="DataCaptureNextButton" data-ng-click="CM01Data.connectCM01Data()" class="btn btn-primary btn-sm btn-next">
                                             <i class="twifIcons twifIcon-large icon-next-arrow inline"></i>
                                         </button>
                                     </li>
@@ -36,10 +36,49 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="">Case Classification</label>
-                    <select class="form-control" multiple="true" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseClassification" data-ng-options="caseClassification.code as caseClassification.title for caseClassification in caseClassifications">
+                    <label for="">Case Outline</label>
+                    <select class="form-control" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail[0]" data-ng-options="caseOutline.code as caseOutline.title for caseOutline in CM01Data.CaseOutline">
                     </select>
-                    <input type="hidden" name="CaseClassification" value="{{CaseClassifications}}">
+                    <input type="hidden">
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="CaseClassificationComment" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail[1]"></textarea>
+                </div>
+                <div class="panel">
+                    <div class="panel-body">
+                        <h3 class="heading">2. Officer Completing Details</h3>
+                    </div>
+                </div>
+                <div class="form-group title-field row">
+                    <div class="col-xs-3">
+                        <label for="">Title</label>
+                        <select class="form-control input-full" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.Title" data-ng-options="CompletingOfficerTitle.label as CompletingOfficerTitle.label for CompletingOfficerTitle in CM01Data.CompletingOfficer.Title">
+                        </select>
+                        <input type="hidden">
+                    </div>
+                    <div class="col-xs-5" data-ng-show="OfficerCompletingTitleIsOther">
+                        <label>Please Specify</label>
+                        <input class="form-control input-full" type="text" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.OtherTitle">
+                    </div>
+                </div>
+                <div class="form-group telephone-field">
+                    <label for="">Telephone</label>
+                    <select class="form-control input-xsm" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.TelephoneType" data-ng-options="CompletingOfficerPhoneType.label as CompletingOfficerPhoneType.label for CompletingOfficerPhoneType in CM01Data.CompletingOfficer.TelephoneType">
+                        <input type="hidden">
+                    </select>
+                    <input type="text" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.TelephoneNumber" class="form-control input-sml">
+                </div>
+                <div class="form-group">
+                    <label for="">Extension</label>
+                    <input type="text" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.Extension" class="form-control input-sml">
+                </div>
+                <div class="form-group">
+                    <label for="">Email Address</label>
+                    <input type="text" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.EmailAddress" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="">Warrant Number</label>
+                    <input type="text" data-ng-model="CM01Form.CaseForm.OfficerCompletingDetails.WarrantNumber" class="form-control">
                 </div>
             </form>
         </div>

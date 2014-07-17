@@ -80,8 +80,8 @@ app.config(["$stateProvider", "$urlRouterProvider", "$httpProvider", "$provide",
                 }
             },
             resolve: {
-                caseClassificationData: function (CM01Service) {
-                    return CM01Service.getCaseClassificationData();
+                CM01Data: function (CM01Service) {
+                    return CM01Service.getCM01Data();
                 }
             }
         })

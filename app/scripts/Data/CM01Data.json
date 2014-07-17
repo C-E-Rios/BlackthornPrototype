@@ -1,0 +1,101 @@
+{
+    "CaseOutline" : [
+
+        {
+            "code" : "SummaryofKeyEvidence",
+            "title" : "Summary of Key Evidence"
+        },
+        {
+            "code" : "DefendantInterview",
+            "title" : "Defendant Interview"
+        },
+        {
+            "code" : "NonKeyEvidence",
+            "title" : "Non Key Evidence"
+        },
+        {
+            "code" : "VisuallyRecordedEvidence",
+            "title" : "Visually Recorded Evidence"
+        },
+        {
+            "code" : "Injuries",
+            "title" : "Injuries"
+        },
+        {
+            "code" : "Fingerprint/Forensic/DrugsEvidence",
+            "title" : "Fingerprint/Forensic/Drugs Evidence"
+        },
+        {
+            "code" : "Issues",
+            "title" : "Issues"
+        },
+        {
+            "code" : "OutstandingWork",
+            "title" : "Outstanding Work"
+        },
+        {
+            "code" : "SensitiveInformation",
+            "title" : "Sensitive Information"
+        },
+        {
+            "code" : "DIPTesting",
+            "title" : "DIP Testing"
+        },
+        {
+            "code" : "ApplicationforCourtOrdersandCompensation",
+            "title" : "Application for Court Orders and Compensation"
+        },
+        {
+            "code" : "AssetRecovery",
+            "title" : "Asset Recovery"
+        }
+    ],
+    "CompletingOfficer" : {
+        "Title" : [
+            {
+                "label" : "Mr"
+            },
+            {
+                "label" : "Mrs"
+            },
+            {
+                "label" : "Miss"
+            },
+            {
+                "label" : "Ms"
+            },
+            {
+                "label" : "Dr"
+            },
+            {
+                "label" : "Rev"
+            },
+            {
+                "label" : "Other"
+            }
+        ],
+        "TelephoneType" : [
+            {
+                "label" : "Home"
+            },
+            {
+                "label" : "Work"
+            },
+            {
+                "label" : "Mobile"
+            },
+            {
+                "label" : "Other"
+            }
+        ]
+
+    }
+}
+
+
+
+
+
+
+
+
