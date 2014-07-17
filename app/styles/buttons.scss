@@ -1,0 +1,32 @@
+@import "compass";
+@import "variables";
+
+.btn-primary {
+    background-color: $primaryButtonBackground;
+    border-color: darken($primaryButtonBackground, 15%);
+	color: $primaryButtonText;
+	&:hover {
+		background-color: $primaryButtonBackgroundHover;
+		border-color: $primaryButtonBackgroundHover;
+		color: $primaryButtonTextHover;
+	}
+}
+.btn-primary[disabled] {
+	background-color: $primaryButtonBackgroundDisabled;
+	border-color: $primaryButtonBackgroundDisabled;
+	&:hover {
+		background-color: $primaryButtonBackgroundDisabled;
+		border-color: $primaryButtonBackgroundDisabled;
+		cursor: default;
+	}
+}
+.btn-md {
+    width: 150px;
+}
+.btn-next {
+    width: 80px;
+	padding: 0.3em;
+}
+.send-messaage-btn {
+    height: 4em;
+}

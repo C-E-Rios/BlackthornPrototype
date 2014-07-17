@@ -1,0 +1,108 @@
+/*
+Fonts
+*/
+$defaultFontStack: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+$defaultFontSize: 12;
+
+
+
+/*
+Colours
+*/
+$bodyText: #12152f;
+$bodyBackground: #ffffff;
+$successState: #95C11F;
+$errorState: #E30613;
+
+
+/*
+Buttons
+*/
+$primaryButtonBackground: #12152f;
+$primaryButtonText: #ffffff;
+$primaryButtonBackgroundHover: #36a9e1;
+$primaryButtonTextHover: #ffffff;
+$primaryButtonBackgroundDisabled: #dadada; 
+
+/*
+Header
+*/
+$headerHeight: 124;
+$headerBackground: #12152f;
+$logo: #ffffff;
+$headerMainLinkText: #ffffff;
+$headerMainLinkBackgroundHover: #36a9e1;
+$headerDivider: #293259;
+$headerInvestigationTitleBackground: #ffffff;
+$headerInvestigationTitleText: #12152f;
+$headerCrumbBackground: #dadada;
+
+/*
+Body
+*/
+$pageTitleBackground: #ffffff;
+$pageTitleText: #12152f;
+
+/*
+Home Buttons
+*/
+
+$homeButtonContainerBackground: #f6f6f6;
+$homeButtonContainerBackgroundHover: #36a9e1;
+$homeButtonContainerText: #12152f;
+$homeButtonContainerTextHover: #ffffff;
+$homeButtonDivider: #12152f;
+
+
+
+/*
+Select Message Type
+*/
+$messageContainerBackground: #f6f6f6;
+$messageContainerBackgroundHover: #36a9e1;
+$messageContainerText: #12152f;
+$messageContainerTextHover: #ffffff;
+$messageContainerDivider: #b2b2b2;
+$messageContainerBackgroundDisabled: #f6f6f6;
+$messageContainerTextDisabled: #c6c6c6;
+$messageContainerBackgroundSelected: #12152f;
+$messageContainerTextSelected: #ffffff;
+
+
+
+/*
+Select Suspects
+*/
+$suspectContainerDivider: #b2b2b2;
+$suspectContainerBackground: #dadada;
+$suspectContainerText: #12152f;
+$suspectContainerBackgroundHover: #36a9e1;
+$suspectContainerTextHover: #ffffff;
+
+
+
+
+
+/*
+Footer
+*/
+$footerHeight: 30;
+$footerBackground: #12152f;
+$footerText: #ffffff;
+
+
+
+/*
+Responsive break points
+*/
+$break-xsmall: 320px;
+$break-small: 640px;
+$break-medium: 768px;
+$break-large: 992px;
+$break-xlarge: 1024px;
+
+
+/*
+Utils
+*/
+$maxZIndex: 2147483647;

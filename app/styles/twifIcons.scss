@@ -1,0 +1,77 @@
+@font-face {
+	font-family: 'twifIcons';
+	src:url('../Fonts/icomoon.eot?-ocodmm');
+	src:url('../Fonts/icomoon.eot?#iefix-ocodmm') format('embedded-opentype'),
+		url('../Fonts/icomoon.woff?-ocodmm') format('woff'),
+		url('../Fonts/icomoon.ttf?-ocodmm') format('truetype'),
+		url('../Fonts/icomoon.svg?-ocodmm#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'twifIcons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.twifIcon {
+	display: inline-block;
+	text-decoration: none;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+}
+.twifIcon:before {
+	display: inline-block;
+	font-style: normal;
+	font-weight: normal;
+	*display: inline;
+	*zoom: 1;
+	vertical-align: middle;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.twifIcon-xlarge {
+	font-size: 3em;
+}
+.twifIcon-large {
+	font-size: 2em;
+}
+.twifIcon-medium {
+	font-size: 1.4em;
+}
+
+.icon-success-tick:before {
+	content: "\e600";
+}
+.icon-next-arrow:before {
+	content: "\e601";
+}
+.icon-error-cross:before {
+	content: "\e602";
+}
+.icon-arrow:before {
+	content: "\e603";
+}
+.icon-draft:before {
+	content: "\e604";
+}
+.icon-message:before {
+	content: "\e605";
+}
+.icon-new-message:before {
+	content: "\e606";
+}
+.icon-suspect:before {
+	content: "\e607";
+}

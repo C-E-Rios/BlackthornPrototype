@@ -1,0 +1,27 @@
+@import "compass";
+@import "variables";
+
+.modal-dialog {
+	margin-top: 200px;
+	.modal-content {
+		width: 70%;
+		margin: 0 auto;
+		text-align: center;
+		.message-send {
+			.twifIcons {
+				color: $successState;
+				&:before {
+					position: relative;
+					top: 10px;
+				}
+			}
+			h3 {
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+			h4 {
+				margin-top: 5px;
+			}	
+		}
+	}
+}

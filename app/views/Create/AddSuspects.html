@@ -1,0 +1,48 @@
+﻿<div class="container">
+    <div class="page-top-section">
+        <div class="page-title-container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div>
+                                    <h1 class="page-title">Select Suspects</h1>
+                                </div>
+                            </div>
+                            <div class="col-xs-6 col-md-5">
+                                <ul class="page-top-tools list-inline pull-right">
+                                    <li class="next-button">
+                                        <button id="suspectNextButton" data-ng-disabled="!selectedSuspects.list.length" data-ng-click="suspects.connectSuspects()" class="btn btn-primary btn-sm btn-next">
+                                            <i class="twifIcons twifIcon-large icon-next-arrow inline"></i>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container" data-ng-show="suspects.list.length">
+    <div class="row">
+        <div class="col-md-5 col-md-offset-1 col-sm-6">
+            <div class="all-suspects-container">
+                <div data-ng-repeat="suspect in suspects.list" data-ng-show="!suspect.selected">
+                    <div id="suspect-{{suspect.Lastname + suspect.Firstname}}" class="suspect-list-item suspect-container" data-selected-list="false" data-details="{{suspect}}"
+                            data-ng-class="{ selected : suspect.selected }">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5 col-md-5 col-sm-6">
+            <div class="selected-suspects-container">
+                <div id="selectedSuspect-{{suspect.Lastname + suspect.Firstname}}" data-ng-repeat="suspect in selectedSuspects.list">
+                    <div class="suspect-list-item selected suspect-container" data-selected-list="true" data-details="{{suspect}}"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

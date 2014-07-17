@@ -1,0 +1,52 @@
+@import "compass";
+@import "mixins";
+@import "variables";
+@import "utils";
+
+
+.dw-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    display: none;
+    padding-left: 10px;
+}
+
+.dw-loading:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.dw-loading.dw-loading-active {
+    display: block;
+}
+
+.dw-loading.dw-loading-overlay {
+    background-color: none;
+    z-index: 100;
+}
+
+
+.dw-loading > .dw-loading-body {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.dw-loading > .dw-loading-body > .dw-loading-spinner {
+    position: relative;
+}
+
+
+// Send message spinner
+
+
+.send-message-spinner {
+    background-color: #fff!important;
+    margin-top: 6em;
+}

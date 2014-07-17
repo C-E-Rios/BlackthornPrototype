@@ -1,0 +1,161 @@
+@import "compass";
+@import "variables";
+/*
+GENERAL
+*/
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+    background-color: $bodyBackground;
+    font-family: $defaultFontStack;
+	color: $bodyText;
+    font-weight: 300;
+	margin: 0 0 #{$footerHeight + 30}px 0;
+	main {
+		margin-top: #{$headerHeight}px;
+		position: relative;
+	}
+	#footer {
+		position: absolute;
+		bottom: 0;
+		height: #{$footerHeight}px;
+		width: 100%;
+		background-color: $footerBackground;
+		color: $footerText;
+		p {
+			padding: 9px 0 0 0;
+			margin: 0;
+			font-size: #{$defaultFontSize - 2}px;
+		}
+		.powered-by {
+			font-style: italic;
+			img {
+				display: inline-block;
+				margin-top: -3px;
+			}
+		}
+	}
+}
+
+
+/*
+Header - Logo, Nav, Toolbar
+*/
+@import "header";
+
+
+
+
+/*
+Page Top Section
+*/
+.page-top-section {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	/*
+	Page Title
+	*/
+	.page-title-container {
+		position: fixed;
+		width: 100%;
+		height: 80px;
+		z-index: 200;
+		background-color: $pageTitleBackground;
+		padding-bottom: 1em;
+		.page-title {
+			margin-top: 25px;
+			font-size: 1.8em;
+			color: $pageTitleText;
+		}
+		.page-top-tools {
+			margin-top: 20px; 
+		}
+	}
+}
+
+
+/*
+Home Pages
+*/
+.home-buttons {
+	padding-top: 7em;
+    .home-button {
+        text-align: center;
+        position: relative;
+        a {
+            font-size: #{$defaultFontSize - 1}px;
+            color: $bodyText;
+            display: block;
+			display: inline-block;
+            .twifIcon {
+                z-index: 1;
+                padding-left: 0;
+                position: relative;
+            }
+            .twifIcon:before {
+                font-size: 4em;
+                padding: 35px;
+                background-color: $homeButtonContainerBackground;
+                border: solid 1px $homeButtonContainerBackground;
+                @include border-radius(5px);
+                left: 0;
+                position: static;
+                color: $homeButtonContainerText;
+            }
+            span {
+                display: block;
+                padding-top: 6px;
+            }
+            &:hover {
+                text-decoration: none;
+                .twifIcon:before {
+					color: $homeButtonContainerTextHover;
+                    background-color: $homeButtonContainerBackgroundHover;
+                }
+            }
+        }
+		&:before {
+			height: 80px;
+			content: '';
+			display: block;
+			position: absolute;
+			top: 20px;
+			left: -17px;
+			border-left: 1px dashed $homeButtonDivider;
+		}
+	}
+	.drafts {
+		&:before {
+			display: none;
+		}
+	}
+}
+
+
+
+
+/*
+Select Message Page
+*/
+@import "select-message-page";
+
+/*
+Select Suspects Page
+*/
+@import "select-suspects-page";
+
+/*
+Data Capture Page
+*/
+@import "data-capture-page";
+
+
+/*
+Send Message Page
+*/
+@import "send-message-page";

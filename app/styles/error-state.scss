@@ -1,0 +1,28 @@
+@import "compass";
+@import "variables";
+
+body.not-authorized {
+	#banner {
+		padding-bottom: 7px;
+	}
+}
+
+
+.panel-error-state {
+	margin-top: 4em;
+	padding: 4em 0 5em;
+	background-color: #ededed;
+	color: $bodyText;
+	text-align: center;
+	.twifIcon:before {
+		color: $errorState;
+	}
+	h1 {
+		font-weight: bold;
+		font-size: 20px;
+	}
+	h2 {
+		margin-top: 10px;
+		font-size: 17px;
+	}
+}

@@ -1,0 +1,131 @@
+@import "compass";
+@import "variables";
+
+.messages-list {
+	margin-top: 6.2em;
+	.message-container {
+		.message-details {
+			padding: 1em 1em 1em;
+			line-height: 25px;
+			margin-bottom: 15px;
+			.message-code {
+				width: 40px;
+			}
+			li {
+				padding-left: 30px;
+				position: relative;
+				&:before {
+					content:" ";
+					position: absolute;
+					margin: 0 -20px;
+					height: 100%;
+					border-left: 1px dotted $messageContainerDivider;
+				}
+			}
+			li {
+				&:first-child {
+					padding-left: 0;
+					&:before {
+						display: none;
+					}
+				}
+			}
+			.error-icon {
+				display: none;
+				.twifIcon {
+					&:before {
+						color: $errorState;
+					}
+				}
+			}
+		}
+		background-color: $messageContainerBackground;
+		color: $messageContainerText;
+		@include border-radius(5px);
+		position: relative;
+		.twifIcon {
+			padding: 0;
+			&:before {
+				position: relative;
+				top: -3px;
+				left: 5px;
+				color: $messageContainerText;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: $messageContainerBackgroundHover;
+			color: $messageContainerTextHover;
+			li {
+				&:before {
+					border-left: 1px dotted $messageContainerTextHover;
+				}
+			}
+			.twifIcon {
+				&:before {
+					color: $messageContainerTextHover;
+				}
+			}
+		}
+
+	}
+	.msg-error {
+		.message-details {
+			.error-icon {
+				display: block;
+			}
+		}	
+	}
+}
+.message-selected  {
+	.message-container {
+		background-color: $messageContainerBackgroundDisabled;
+		color: $messageContainerTextDisabled;
+		.twifIcon {
+			&:before {
+				color: $messageContainerTextDisabled;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: $messageContainerBackgroundDisabled;
+			color: $messageContainerTextDisabled;
+			.twifIcon {
+				&:before {
+					color: $messageContainerTextDisabled;
+				}
+			}
+		}
+	}
+	.pending {
+		cursor: pointer;
+		background-color: $messageContainerBackgroundSelected;
+		color: $messageContainerTextSelected;
+		.twifIcon {
+			&:before {
+				color: $messageContainerTextSelected;
+			}
+		}
+		&:hover {
+			cursor: pointer;
+			background-color: $messageContainerBackgroundSelected;
+			color: $messageContainerTextSelected;
+			.twifIcon {
+				&:before {
+					color: $messageContainerTextSelected;
+				}
+			}
+		}
+	}
+	.message-container {
+		.message-details {
+			.error-icon {
+				.twifIcon {
+					&:before {
+						color: $messageContainerTextDisabled;
+					}
+				}
+			}
+		}
+	}
+}

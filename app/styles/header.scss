@@ -1,0 +1,126 @@
+@import "compass";
+@import "variables";
+
+header {
+    /*
+    Layout
+    */
+    #banner {
+        background-color: $headerBackground;
+    }
+    .container {
+        padding: 0;
+        > .row:first-child {
+            margin: 0;
+            > .col-xs-6,
+				ul.nav > .col-xs-6,
+                nav > div {
+                        padding: 0;
+                        position: relative;
+            }
+        }
+    }
+    /*
+    Logo
+    */
+	hgroup {
+		margin: 10px 0 0 0px;
+		a {
+			color: $logo;
+			&:hover, &:focus {
+				text-decoration: none;
+				color: $logo;
+			}
+			h1,
+			h2 {
+				font-weight: normal;
+				margin: 0;
+				padding: 0;
+			}
+			h2 {
+				font-size: #{$defaultFontSize}px;
+				margin-top: 4px;
+			}
+
+		}
+
+	}
+    /*
+    Nav
+    */
+    nav {
+        .nav {
+            padding: 0;
+			margin: 0;
+>			li {
+                > a {
+                    outline: 0;
+                    text-align: center;
+                    line-height: 58px;
+                    display: block;
+                    padding: 0;
+                    font-size: #{$defaultFontSize + 4}px;
+                    letter-spacing: 0px;
+                    color: $headerMainLinkText;
+                    &:before, &:after {
+                        height: 40px;
+                        width: 1px;
+                        background-color: $headerDivider;
+                        position: absolute;
+                        top: 10px;
+                        display: block;
+                        content: '';
+                    }
+                    &:after {
+                        right: -1px;
+                    }
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: $headerMainLinkBackgroundHover;
+                        &:before, &:after {
+                            display: none;
+                        }
+                    }
+                }
+                .no-hover {
+                    &:hover,
+                    &:active,
+                    &:focus {
+                        background-color: $headerMainLinkBackgroundHover;
+                    }
+                }
+                .active {
+                    background-color: $headerMainLinkBackgroundHover;
+                    &:before, &:after {
+                        display: none;
+                    }
+                }
+            }
+            .nav-manage {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    /*
+    Tools
+    */
+    #investigation-title-container {
+        text-align: center;
+		height: 38px;
+        background-color: $headerInvestigationTitleBackground;
+        .investigation-title-h3 {
+            font-size: 16px;
+			margin-top: 11px;
+			color: $headerInvestigationTitleText;
+        }
+    }
+    #progress-indicator-container {
+		height: 28px;
+        background-color: $headerCrumbBackground;
+    }
+
+}

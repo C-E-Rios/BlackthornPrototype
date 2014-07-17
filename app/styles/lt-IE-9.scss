@@ -1,0 +1,14 @@
+html.lt-ie9 {
+
+	// Select message type page - Adjusting 
+	.messages-list {
+		.message-container {
+			.twifIcon {
+				&:before {
+					top: -4px;
+				}
+			}
+		}
+	}
+
+}

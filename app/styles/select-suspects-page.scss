@@ -1,0 +1,138 @@
+@import "compass";
+@import "variables";
+
+
+/*
+Suspect Tools
+*/
+
+
+
+/*
+All Suspects
+*/
+
+.all-suspects-container, .selected-suspects-container {
+    margin-top: 6.2em;
+}
+
+.all-suspects-container {
+	&:after {
+        content:" ";
+        position: absolute;
+		top: 0;
+		right: 0;
+        height: 100%;
+        border-left: 1px dotted $suspectContainerDivider;		
+	}
+}
+
+
+/*
+Suspect Container
+*/
+
+
+.suspect-container {
+    position: relative;
+    cursor: pointer;
+    width: 93%;
+	padding: 0.2em;
+	margin-top: 1em;
+    background-color: $suspectContainerBackground;
+    color: $suspectContainerText;
+    @include border-radius(3px);
+    .suspect-details {
+        .suspect-name {
+			padding-left: 17px;
+        }
+        li {
+            position: relative;
+			height: 24px;
+            &:before {
+                content:" ";
+                position: absolute;
+                margin: -1px 7px;
+                height: 100%;
+                border-left: 1px dotted $suspectContainerDivider;
+			}
+            &:first-child {
+                padding-left: 0;
+                &:before {
+                    display: none;
+                }
+            }
+			.twifIcons {
+				&:before {
+					position: relative;
+					left: 12px;
+					top: 6px;
+					color: $suspectContainerText;
+				}
+			}
+        }
+		.last-child {
+			float: right;
+			&:before {
+				margin: 10px -10px;
+			}
+			.twifIcons {
+				&:before {
+					position: relative;
+					left: 0px;
+					top: 8px;
+					color: $suspectContainerText;
+				}
+			}
+		}
+    }
+	&:hover {
+		background-color: $suspectContainerBackgroundHover;
+		color: $suspectContainerTextHover;
+		li, .last-child {
+			&:before {
+				border-left: 1px dotted $suspectContainerTextHover;
+			}
+			.twifIcons {
+				&:before {
+					color: $suspectContainerTextHover;
+				}
+			}
+		}
+	}
+}
+
+.selected-suspects-container {
+	.selected {
+		margin-left: 2em;	
+	} 
+	&:before {
+        content:" ";
+        position: absolute;
+		top: 0;
+		left: -1px;
+        height: 100%;
+        border-left: 1px dotted $suspectContainerDivider;		
+	}
+	.suspect-container {
+	    .suspect-details {
+			li {
+				.twifIcons {
+					&:before {
+						color: $successState;
+					}
+				}
+			}
+			.last-child {
+				.twifIcons {
+					&:before {
+						display: none;
+					}
+				}
+				&:before {
+					margin: 10px -30px;
+				}
+			}
+		}
+	}					
+}
