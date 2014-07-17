@@ -37,12 +37,12 @@
                 </div>
                 <div class="form-group">
                     <label for="">Case Outline</label>
-                    <select class="form-control" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail[0]" data-ng-options="caseOutline.code as caseOutline.title for caseOutline in CM01Data.CaseOutline">
+                    <select class="form-control" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail.Type" data-ng-options="caseOutline.code as caseOutline.title for caseOutline in CM01Data.CaseOutline">
                     </select>
                     <input type="hidden">
                 </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="CaseClassificationComment" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail[1]"></textarea>
+                    <textarea class="form-control" name="CaseClassificationComment" data-ng-model="CM01Form.CaseForm.CaseOutline.CaseOutlineDetail.Narrative"></textarea>
                 </div>
                 <div class="panel">
                     <div class="panel-body">

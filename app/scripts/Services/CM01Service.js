@@ -8,7 +8,12 @@ app.factory('CM01Service', function ($http) {
         SuspectIds: [],
         CaseForm: {
             CaseOutline: {
-                CaseOutlineDetail: []
+                CaseOutlineDetail: [
+                    {
+                        Type: '',
+                        Narrative: ''
+                    }
+                ]
             },
             OfficerCompletingDetails: [
                 {
